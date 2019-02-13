@@ -1,16 +1,13 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
 <?php
-/**
- * Created by PhpStorm.
- * User: tauno.peepson
- * Date: 13.02.2019
- * Time: 12:14
- */
-echo "Hello World!";
-echo "Hello World!";
-echo "Hello World!";
-
-echo '<hr>';
-
-echo "Hello World!";
-echo "Hello World!";
-echo "Hello World!";
+echo '<div class="punane"></div>';
+echo '<div class="kollane"></div>';
+echo '<div class="roheline"></div>';
+?>
+    </body>
+</html>
