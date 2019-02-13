@@ -12,21 +12,16 @@ $pnimi = "Peepson";
 $vanus = 19;
 $sugu = "mees";
 
-switch ($sugu) {
-    case 'mees';
-        echo '<p style="color: blue">';
-        break;
-    case 'naine';
-        echo '<p style="color: red">';
-        break;
-    default:
-        echo '<p style="color: green">';
-        break;
-}
-
 $nimi = $enimi.' '.$pnimi;
 echo "$nimi $vanus $sugu";
 echo '<br>';
+
+
+
+if ($sugu == 'mees')
+    echo '<p style="color:blue;">';
+else
+    echo '<p style="color:red;">';
 //var_dump($nimi); Muutjua sisu. (string(13) "Tauno Peepson")
 ?>
 
