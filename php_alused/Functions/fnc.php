@@ -28,6 +28,7 @@ function kasAlgarv($arv){
     return $kontroll;
 }
 
+
 function tabeliPais(){
     return '
         <thead class="thead-dark">
