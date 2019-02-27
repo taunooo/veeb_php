@@ -1,15 +1,19 @@
 <?php
-$nimi = $_GET['nimi'];
-$parool = $_GET['parool'];
-
-foreach ($_GET AS $nimetus => $vaartus){
-    echo $nimetus.' => '.$vaartus.'<br>';
+// ruumalate arvutused
+function keraRuumala($keraRaadius){
+    return 4/3 * pi() * pow($keraRaadius, 3);
 }
-$silindriRuumala = (3.14 * $raadius * $raadius * $korgus);
-echo 'Silindri ruumala on '.$silRuumala.'<br>';
-
-$koonuseRuumala = (3.14 * $raadius * $raadius * $korgus * 0.3);
-echo 'Koonuse ruumala on '.$kooRuumala.'<br>';
-
-$keraRuumala = (1.3 * 3.14 * $raadius * $raadius * $raadius);
-echo 'Kera ruumala on '.$keraRuumala.'<br>';
+function koonuseRuumala($koonuseRaadius, $koonuseKorgus){
+    return 1/3 * pi() * pow($koonuseRaadius, 2) * $koonuseKorgus;
+}
+function silindriRuumala($silindriRaadius, $silindriKorgus){
+    return pi() * pow($silindriRaadius, 2) * $silindriKorgus;
+}
+// andmete väljastamine
+function valjasta($ruumala){
+    return round($ruumala, 2).' cm<sup>3</sup><br>';
+}
+// vormist andmed töötlus
+echo 'Kera ruumala on '.valjasta(keraRuumala($_GET['keraRaadius'])) ;
+echo 'Silindri ruumala on '.valjasta(silindriRuumala($_GET['silindriRaadius'], $_GET['silindriKorgus'])) ;
+echo 'Koonuse ruumala on '.valjasta(koonuseRuumala($_GET['koonuseRaadius'], $_GET['koonuseKorgus'])) ;
