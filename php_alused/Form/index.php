@@ -13,8 +13,8 @@ function vorm(){
 
                 <div>
                     <button type="submit" name="korgemHind" onclick=
-                    "usort($raamatud, \'vordleHinda\');
-                    tabel(filtreeriHinnaJargi($raamatud, 0, 100));">
+                    "usort($raamatud.txt, \'vordleHinda\');
+                    tabel(filtreeriHinnaJargi($raamatud.txt, 0, 100));">
                     Kõrge enne</button>
                 </div>
             </form>
@@ -95,8 +95,8 @@ function filtreeriHinnaJargi($andmed, $algHind, $loppHind){
 }
 
 
-//usort($raamatud, 'vordleHinda');
-//tabel(filtreeriHinnaJargi($raamatud, 0, 100));
+//usort($raamatud.txt, 'vordleHinda');
+//tabel(filtreeriHinnaJargi($raamatud.txt, 0, 100));
 
 echo vorm();
 
